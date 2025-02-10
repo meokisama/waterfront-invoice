@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hóa đơn tiền điện</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .invoice-box {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .total {
+            font-size: 18px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice-box">
+        <h2>HÓA ĐƠN TIỀN ĐIỆN</h2>
+        <div class="info">
+            <p><strong>Mã hóa đơn:</strong> {{ invoice_id }}</p>
+            <p><strong>Khách hàng:</strong> {{ customer }}</p>
+            <p><strong>Địa chỉ:</strong> {{ address }}</p>
+        </div>
+        <table>
+            <tr>
+                <th>Số điện đầu tháng</th>
+                <th>Số điện hiện tại</th>
+                <th>Đơn giá (VNĐ/kWh)</th>
+                <th>Tổng tiền (VNĐ)</th>
+            </tr>
+            <tr>
+                <td>{{ previous_reading }}</td>
+                <td>{{ current_reading }}</td>
+                <td>{{ price_per_unit }}</td>
+                <td class="total">{{ total_price }}</td>
+            </tr>
+        </table>
+        <p style="text-align: center; margin-top: 20px;">Cảm ơn quý khách đã sử dụng dịch vụ!</p>
+    </div>
+</body>
+
+</html>
