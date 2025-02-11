@@ -1,36 +1,36 @@
-### 1. Chạy tự động
+### 1. Run automatically
 
-- `install.bat`: cài môi trường ảo thư viện cần thiết
-- `run.bat`: xuất hóa đơn, hiện terminal
-- `auto.vbs`: xuất hóa đơn ngầm, không hiện terminal
+- `install.bat`: Install the required virtual environment and libraries.
+- `run.bat`: Generate invoices and display the terminal.
+- `auto.vbs`: Generate invoices silently without displaying the terminal.
 
-### 2. Cài thủ công
+### 2. Manual installation
 
-- Tạo môi trường ảo
+- Create a virtual environment
 
-  Trong thư mục dự án, chạy lệnh sau để tạo môi trường ảo:
+  In the project directory, run the following command to create a virtual environment:
 
   ```sh
   python -m venv env
   ```
 
-  `env` là tên thư mục chứa môi trường ảo, có thể đặt tên khác.
+  `env` is the name of the folder containing the virtual environment, which can be renamed as needed.
 
-- Kích hoạt môi trường ảo (Windows CMD)
+- Activate the virtual environment (Windows CMD)
 
   ```sh
   env\Scripts\activate
   ```
 
-- Hủy kích hoạt môi trường ảo
+- Deactivate the virtual environment
 
   ```sh
   deactivate
   ```
 
-- Xóa môi trường ảo
+- Delete the virtual environment
 
-  Nếu không cần nữa, xóa thư mục `env`:
+  If no longer needed, delete the `env` folder:
 
   ```sh
   rd /s /q env
